@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PlantApp.Data.Models\PlantApp.Data.Models.csproj" />
+    <ProjectReference Include="..\PlantApp.Data\PlantApp.Data.csproj" />
+  </ItemGroup>
+
+</Project>
