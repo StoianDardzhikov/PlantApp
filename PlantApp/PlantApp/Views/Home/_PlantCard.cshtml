@@ -1,6 +1,8 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@using PlantApp.ViewModels; 
+@model PlantCardViewModel
 
 <div class="card-container">
     <div class="card-image-container">
@@ -117,8 +119,8 @@
     </div>
     <div class="plant-info">
 
-        <h3 class="plant-name">Цвете</h3>
+        <h3 class="plant-name">@Model.Name</h3>
 
-        <button class="btn-water">ПОЛЕЙ</button>
+        <button class="btn-water" value="@Model.Id">ПОЛЕЙ</button>
     </div>
 </div>

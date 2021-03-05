@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PlantServiceApp.Services.Contracts
+namespace PlantApp.Services.Contracts
 {
     public interface IPlantService
     {

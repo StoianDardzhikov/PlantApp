@@ -1,11 +1,12 @@
 ﻿using PlantApp.Data.Models;
 using PlantApp.Services.Factories;
 using PlantApp.Services.Repositories;
-using PlantServiceApp.Services.Contracts;
+using PlantApp.Services.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using PlantApp.Data;
 
 namespace PlantApp.Services
 {
@@ -16,11 +17,11 @@ namespace PlantApp.Services
 
         UserRepository userRepository;
 
-        public PlantService(PlantRepository plantRepository, PlantFactory plantFactory, UserRepository userRepository)
+        public PlantService(PlantAppDbContext context)
         {
-            this.plantRepository = plantRepository;
-            this.plantFactory = plantFactory;
-            this.userRepository = userRepository;
+            this.plantRepository = new PlantRepository(context);
+            this.plantFactory = new PlantFactory();
+            this.userRepository = new UserRepository(context);
         }
 
         public int Add(string name, int wateringPeriod, DateTime lastWateredOn, string userId)
@@ -53,9 +54,9 @@ namespace PlantApp.Services
             plantRepository.Update(plant);
         }
 
-        public List<Plant> ListAll(string userId)
+        public List<Plant> ListAll(string username)
         {
-            User user = userRepository.GetById(userId);
+            User user = userRepository.GetByName(username);
             return user.Plants.ToList();
         }
 

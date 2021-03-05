@@ -26,6 +26,7 @@
     <ProjectReference Include="..\PlantApp.Data.Models\PlantApp.Data.Models.csproj" />
     <ProjectReference Include="..\PlantApp.Data\PlantApp.Data.csproj" />
     <ProjectReference Include="..\PlantApp.Services\PlantApp.Services.csproj" />
+    <ProjectReference Include="..\PlantApp.ViewModels\PlantApp.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

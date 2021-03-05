@@ -8,7 +8,9 @@ using Microsoft.Extensions.Hosting;
 using PlantApp.Data;
 using PlantApp.Data.Models;
 using PlantApp.Services;
-using PlantServiceApp.Services.Contracts;
+using PlantApp.Services.Contracts;
+using PlantApp.Services.Repositories;
+using PlantApp.Services.Repositories.Interfaces;
 using System;
 
 namespace PlantApp
@@ -31,9 +33,10 @@ namespace PlantApp
             services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<PlantAppDbContext>();
             services.AddControllersWithViews();
+            services.AddScoped<IPlantService, PlantService>();
             services.AddRazorPages();
             services.AddScoped<IDisposable, UserManager<User>>();
-            //services.AddScoped<IPlantService, PlantService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

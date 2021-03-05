@@ -1,33 +1,39 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@using PlantApp.ViewModels;
+@model HomeViewModel
 
 <div class="page-content-container">
     <h1 class="title">Welcome</h1>
     <div class="card-grid">
         @{
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
-            Html.RenderPartial("_PlantCard");
+            foreach (PlantCardViewModel plantCard in Model.plantCards)
+            {
+                Html.RenderPartial("_PlantCard", plantCard);
+            }
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
+            //Html.RenderPartial("_PlantCard");
         }
     </div>
 </div>

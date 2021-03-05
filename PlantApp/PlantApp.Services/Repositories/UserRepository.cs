@@ -16,9 +16,9 @@ namespace PlantApp.Services.Repositories
             this.context = context;
         }
 
-        public User GetById(string id)
+        public User GetByName(string username)
         {
-            return context.Users.FirstOrDefault(p => p.Id == id);
+            return context.Users.FirstOrDefault(p => p.UserName == username);
         }
     }
 }
