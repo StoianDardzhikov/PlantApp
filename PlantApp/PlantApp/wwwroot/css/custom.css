@@ -1,0 +1,270 @@
+﻿body {
+    min-height: 100vh;
+    min-width: 100%;
+    margin-bottom: 0px;
+    background-color: #272C33;
+}
+
+main {
+    padding-bottom: 0px !important;
+}
+
+.page-content {
+    margin-left: 7rem;
+}
+
+.page-container {
+    display: flex;
+}
+
+.page-content-container {
+    justify-content: center;
+}
+
+.title {
+    margin-top: 30px;
+    color: white;
+    margin-left: 40vw;
+}
+/*--- NAVBAR START ---*/
+
+.nav-fixed {
+    background-color: #31363E;
+    position: fixed;
+    height: 100vh;
+    padding-top: 30px;
+    box-shadow: #151515 3px 0px 5px;
+}
+
+.navibar {
+    list-style-type: none;
+    padding: 7px;
+}
+
+.navbar-item {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 0 2.5rem 0;
+    border-radius: 50%;
+    padding: 10px 10px;
+    transition: 0.5s;
+}
+
+.navbar-profile-icon {
+    width: 4rem;
+    height: 4rem;
+    padding: 10px 10px;
+    border-radius: 50%;
+    margin-top: 35rem;
+    transition: 0.5s;
+}
+
+.navbar-item:hover {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #484F5A;
+}
+
+.navbar-profile-icon:hover {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #484F5A;
+}
+
+/*--- NAVBAR END ---*/
+
+
+
+
+/*--- HOME START ---*/
+.card-grid {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: repeat(5, 19rem);
+    margin-left: 7rem;
+    margin-top: 2rem;
+}
+
+.card-container {
+    margin-top: 3rem;
+    margin-right: 3rem;
+}
+
+.card-image-container {
+    transition: 0.3s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 10rem;
+    background-color: white;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.card-image {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+}
+
+.plant-info {
+    transition: 0.3s;
+    position: relative;
+    display: grid;
+    grid-auto-columns: 10rem;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 5.5rem;
+    background-color: #31363E;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: #171717 0px 1px 7px;
+}
+
+.plant-name {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.plant-info {
+    color: white;
+}
+
+.btn-water {
+    margin-bottom: 10px;
+    border: none;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: #484F5A;
+    color: white;
+    transition: 0.2s;
+}
+
+.card-container:hover .card-image-container {
+    width: 16rem;
+    height: 11rem;
+    margin: -0.5rem;
+}
+
+.card-container:hover .plant-info {
+    width: 16rem;
+    height: 6.5rem;
+    margin: -0.5rem;
+    box-shadow: #171717 0px 4px 5px;
+}
+
+.btn-water:hover {
+    width: 10.25rem;
+    height: 2.25rem;
+    margin: -0.125rem;
+    margin-bottom: 0.5rem;
+    font-size: 17px;
+    background-color: #576272;
+}
+
+/*--- HOME END ---*/
+
+
+
+
+/*---LOGIN / REGISTER START ---*/
+
+.login-register-page-container {
+    display: flex;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 13rem;
+    margin-left: 5rem;
+}
+
+.login-register-title {
+    color: white;
+}
+
+.input-container {
+    display: grid;
+    margin-top: 2rem;
+}
+
+.login-register-label {
+    font-size: 30px;
+}
+
+.login-register-input {
+    height: 3rem;
+    width: 25rem;
+    border: 10px solid #31363E;
+    outline: none;
+    border-radius: 20px;
+    background-color: #31363E;
+    color: white;
+}
+
+.login-register-label {
+    color: white;
+}
+
+.login-register-submit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-login-register-submit {
+    margin-top: 4rem;
+    width: 17rem;
+    height: 3.5rem;
+    border-radius: 15px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    background-color: #4CAF50;
+    color: white;
+    transition: 0.5s;
+}
+
+.login-register-background {
+    position: absolute;
+    height: 90vh;
+    width: 50vw;
+    z-index: -100;
+    right: 150px;
+    justify-self: right;
+}
+
+.login-register-app-name {
+    position: absolute;
+    color: white;
+    font-size: 45px;
+    right: 420px;
+    bottom: 50px;
+}
+
+.login-register-link {
+    color: gray;
+    font: italic;
+}
+
+input.login-register-submit[type="submit"]:hover {
+    width: 17.5rem;
+    height: 3.75rem;
+    font-size: 26px;
+    background-color: #65c25e;
+}
+
+
+
+
+/*--- LOGIN / REGISTER END ---*/

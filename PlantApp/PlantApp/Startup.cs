@@ -33,7 +33,7 @@ namespace PlantApp
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddScoped<IDisposable, UserManager<User>>();
-            services.AddScoped<IPlantService, PlantService>();
+            //services.AddScoped<IPlantService, PlantService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
