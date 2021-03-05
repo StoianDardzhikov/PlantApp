@@ -26,11 +26,17 @@ namespace PlantApp.Controllers
         {
 
             if (!User.Identity.IsAuthenticated) return Redirect("/Identity/Account/Login");
-            var plants = plantService.ListAll(User.Identity.Name);
+            var plants = plantService.ListAllForWatering(User.Identity.Name);
             Console.WriteLine(plants.Count);
             IEnumerable<PlantCardViewModel> plantCards = plants.Select(x => new PlantCardViewModel() { Id = x.Id, Name = x.Name });
             HomeViewModel hvm = new HomeViewModel() { plantCards = plantCards };
             return View(hvm);
+        }
+
+        public IActionResult Water(int id)
+        {
+            plantService.SetPlantWatered(id);
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Privacy()

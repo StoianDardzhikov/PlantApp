@@ -120,7 +120,8 @@
     <div class="plant-info">
 
         <h3 class="plant-name">@Model.Name</h3>
-
-        <button class="btn-water" value="@Model.Id">ПОЛЕЙ</button>
-    </div>
+        <form>
+            <button class="btn-water" asp-area="" asp-route-id="@Model.Id" asp-action="Water" asp-controller="Home">ПОЛЕЙ</button>
+        </form>
+	</div>
 </div>
