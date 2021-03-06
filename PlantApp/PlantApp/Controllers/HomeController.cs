@@ -24,10 +24,9 @@ namespace PlantApp.Controllers
 
         public IActionResult Index()
         {
-
             if (!User.Identity.IsAuthenticated) return Redirect("/Identity/Account/Login");
+
             var plants = plantService.ListAllForWatering(User.Identity.Name);
-            Console.WriteLine(plants.Count);
             IEnumerable<PlantCardViewModel> plantCards = plants.Select(x => new PlantCardViewModel() { Id = x.Id, Name = x.Name });
             HomeViewModel hvm = new HomeViewModel() { plantCards = plantCards };
             return View(hvm);
