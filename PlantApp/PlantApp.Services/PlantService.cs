@@ -24,10 +24,10 @@ namespace PlantApp.Services
             this.userRepository = new UserRepository(context);
         }
 
-        public int Add(string name, int wateringPeriod, DateTime lastWateredOn, string userId)
+        public int Add(string name, int wateringPeriod, DateTime lastWateredOn, string username)
         {
             Plant plant = plantFactory.CreateInstance(name, wateringPeriod, lastWateredOn);
-            plant.UserId = userId;
+            plant.UserId = userRepository.GetByName(username).Id;
             plantRepository.Add(plant);
 
             return plant.Id;
@@ -60,16 +60,17 @@ namespace PlantApp.Services
             return user.Plants.ToList();
         }
 
-        public List<Plant> ListAllForWatering(string userId)
+        public List<Plant> ListAllForWatering(string username)
         {
             List<Plant> plantsToWater = new List<Plant>();
-            List<Plant> plants = ListAll(userId);
+            List<Plant> plants = ListAll(username);
 
             foreach (var plant in plants)
             {
                 TimeSpan interval = new TimeSpan(plant.WateringPeriod, 0, 0, 0);
                 DateTime toWater = plant.LastWateredOn + interval;
-                if ((toWater - DateTime.UtcNow).Days <= 0)
+                TimeSpan leftTime = toWater - DateTime.UtcNow;
+                if (leftTime.Hours <= 0 && leftTime.Days <= 0)
                 {
                     plantsToWater.Add(plant);
                 }
@@ -77,9 +78,9 @@ namespace PlantApp.Services
             return plantsToWater;
         }
 
-        public List<Plant> GetPlantsByName(List<Plant> allPlants, string name)
+        public List<Plant> GetPlantsByName(string name, string username)
         {
-            return allPlants.Where(p => p.Name.StartsWith(name)).ToList();
+            return userRepository.GetByName(username).Plants.Where(p => p.Name.StartsWith(name)).ToList();
         }
     }
 }

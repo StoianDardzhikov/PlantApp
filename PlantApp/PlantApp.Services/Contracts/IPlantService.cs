@@ -7,10 +7,12 @@ namespace PlantApp.Services.Contracts
 {
     public interface IPlantService
     {
-        int Add(string name, int wateringPeriod, DateTime lastWateredOn, string userId);
+        int Add(string name, int wateringPeriod, DateTime lastWateredOn, string username);
         void Edit(string name, int wateringPeriod, int plantId);
         void Delete(int plantId);
-        List<Plant> ListAll(string userId);
-        List<Plant> ListAllForWatering(string userId);
+        void SetPlantWatered(int plantId);
+        List<Plant> ListAll(string username);
+        List<Plant> ListAllForWatering(string username);
+        List<Plant> GetPlantsByName(string name, string username);
     }
 }

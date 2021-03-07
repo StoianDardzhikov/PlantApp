@@ -9,17 +9,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using PlantApp.Services.Contracts;
 
 namespace PlantApp.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly PlantService plantService;
-        public HomeController(ILogger<HomeController> logger, PlantAppDbContext context)
+        private readonly IPlantService plantService;
+        public HomeController(ILogger<HomeController> logger, IPlantService plantService)
         {
             _logger = logger;
-            plantService = new PlantService(context);
+            this.plantService = plantService;
         }
 
         public IActionResult Index()

@@ -3,7 +3,7 @@
 *@
 
 @using PlantApp.ViewModels;
-@model PlantCardViewModel
+@model MyPlantsPlantCardViewModel
 
 <div class="card-container">
     <div class="card-image-container">
@@ -180,7 +180,7 @@
     </div>
     <div class="plant-info-myplants">
         <h3 class="plant-name">@Model.Name</h3>
-		<p>Период на поливане: </p>
+		<p>Период на поливане: @Model.WateringPeriod</p>
         <form class="btn-edit-delete-container">
             <button class="btn-edit-plant" asp-area="" asp-route-id="@Model.Id" asp-action="Edit" asp-controller="MyPlants">Промени</button>
 			<button class="btn-delete-plant" asp-area="" asp-route-id="@Model.Id" asp-action="Delete" asp-controller="MyPlants">Изтрий</button>

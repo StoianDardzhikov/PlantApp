@@ -6,6 +6,7 @@ namespace PlantApp.ViewModels
 {
     public class MyPlantsViewModel
     {
-        public IEnumerable<PlantCardViewModel> plantCards { get; set; }
+        public IEnumerable<MyPlantsPlantCardViewModel> plantCards { get; set; }
+        public string SearchText { get; set; }
     }
 }
