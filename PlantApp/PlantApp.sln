@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlantApp.Data", "PlantApp.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlantApp.Data.Models", "PlantApp.Data.Models\PlantApp.Data.Models.csproj", "{047DB470-6121-4900-9209-76384A9CB977}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantApp.Services", "PlantApp.Services\PlantApp.Services.csproj", "{7634A26C-AB72-4239-BC23-24044F224D12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlantApp.Services", "PlantApp.Services\PlantApp.Services.csproj", "{7634A26C-AB72-4239-BC23-24044F224D12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantApp.ViewModels", "PlantApp.ViewModels\PlantApp.ViewModels.csproj", "{E29FFB7D-AF44-4D1C-B497-3A12B01D69C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlantApp.ViewModels", "PlantApp.ViewModels\PlantApp.ViewModels.csproj", "{E29FFB7D-AF44-4D1C-B497-3A12B01D69C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantApp.Tests", "PlantApp.Tests\PlantApp.Tests.csproj", "{18D51555-B1AD-4408-B360-53F2E30707CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E29FFB7D-AF44-4D1C-B497-3A12B01D69C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E29FFB7D-AF44-4D1C-B497-3A12B01D69C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E29FFB7D-AF44-4D1C-B497-3A12B01D69C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18D51555-B1AD-4408-B360-53F2E30707CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18D51555-B1AD-4408-B360-53F2E30707CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18D51555-B1AD-4408-B360-53F2E30707CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18D51555-B1AD-4408-B360-53F2E30707CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

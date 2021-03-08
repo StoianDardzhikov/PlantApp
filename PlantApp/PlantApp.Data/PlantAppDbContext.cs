@@ -9,13 +9,15 @@ namespace PlantApp.Data
 {
     public class PlantAppDbContext : IdentityDbContext
     {
+        public PlantAppDbContext() { }
+
         public PlantAppDbContext(DbContextOptions<PlantAppDbContext> options)
             : base(options)
         {
         }
 
-        public DbSet<Plant> Plants { get; set; }
-        public DbSet<User> Users { get; set; }
+        public virtual DbSet<Plant> Plants { get; set; }
+        public virtual DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
