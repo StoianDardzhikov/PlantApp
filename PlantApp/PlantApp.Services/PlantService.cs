@@ -82,5 +82,10 @@ namespace PlantApp.Services
         {
             return userRepository.GetByName(username).Plants.Where(p => p.Name.StartsWith(name)).ToList();
         }
+
+        public Plant GetById(int plantId)
+        {
+            return plantRepository.GetById(plantId);
+        }
     }
 }

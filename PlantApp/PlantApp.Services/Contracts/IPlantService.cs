@@ -14,5 +14,6 @@ namespace PlantApp.Services.Contracts
         List<Plant> ListAll(string username);
         List<Plant> ListAllForWatering(string username);
         List<Plant> GetPlantsByName(string name, string username);
+        Plant GetById(int plantId);
     }
 }

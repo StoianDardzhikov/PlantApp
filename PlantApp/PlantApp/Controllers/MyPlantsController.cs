@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PlantApp.Data;
+using PlantApp.Data.Models;
 using PlantApp.Services;
 using PlantApp.Services.Contracts;
 using PlantApp.ViewModels;
@@ -44,6 +45,21 @@ namespace PlantApp.Controllers
             MyPlantsViewModel mpvw = new MyPlantsViewModel() { plantCards = plantCards };
             return View("Index", mpvw);
 
+        }
+
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            Plant plant = plantService.GetById(id);
+            EditPlantViewModel epvm = new EditPlantViewModel() { PlantId = plant.Id, PlantName = plant.Name, WateringPeriod = plant.WateringPeriod };
+            return View("Edit", epvm);
+        }
+
+        [Authorize]
+        public IActionResult EditPlant(int id, string plantName, int wateringPeriod)
+        {
+            plantService.Edit(plantName, wateringPeriod, id);
+            return RedirectToAction("Index");
         }
     }
 }
