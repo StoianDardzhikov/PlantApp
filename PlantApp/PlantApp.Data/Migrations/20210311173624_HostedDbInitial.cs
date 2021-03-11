@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PlantApp.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class HostedDbInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -135,6 +135,11 @@ p{
     background-color: #484F5A;
 }
 
+.btn-logout:active{
+    outline: 0;
+    border: none;
+}
+
 /*--- NAVBAR END ---*/
 
 
@@ -225,6 +230,11 @@ p{
     background-color: #576272;
 }
 
+.btn-water:active{
+    outline: 0;
+    border: none;
+}
+
 /*--- HOME/MYPLANTS(PARTIAL) END ---*/
 
 
@@ -248,6 +258,11 @@ p{
     border-bottom-right-radius: 15px;
     box-shadow: #171717 0px 1px 7px;
     color: white;
+}
+
+.plant-period{
+    display: flex;
+    font-size: 15px;
 }
 
 .btn-edit-delete-container{
@@ -297,6 +312,15 @@ p{
     background-color: #576272;
 }
 
+.btn-delete-plant:active{
+    outline: 0;
+}
+
+.btn-edit-plant:active{
+    outline: 0;
+    border: none;
+}
+
 /*--- MYPLANTS CARD END ---*/
 
 
@@ -342,6 +366,11 @@ p{
     border-radius: 20px;
     background-color: #31363E;
     color: white;
+}
+
+.btn-search:active {
+    outline: 0; 
+    border: none;
 }
 
 /*--- SEARCH ENGINE END ---*/
@@ -390,7 +419,7 @@ p{
     width: 15rem;
     height: 2.5rem;
     border: none;
-    outline: none;
+    outline: 0;
     color: white;
     background-color: #29a82e;
     border-radius: 15px;
@@ -410,6 +439,11 @@ p{
     width: 15.45rem;
     height: 2.95rem;
     background-color: #269d2b;
+}
+
+.btn-add-plant:active{
+    outline: 0;
+    border: none;
 }
 
 /*--- ADD(PLANTS) END ---*/
@@ -493,7 +527,7 @@ p{
     position: absolute;
     color: white;
     font-size: 45px;
-    right: 420px;
+    right: 500px;
     bottom: 50px;
 }
 
@@ -546,6 +580,11 @@ input.login-register-submit[type="submit"]:hover {
 
 .btn-login-register-submit:hover .btn-login-register-plant-svg-3 {
     transform: translateY(-2.5rem);
+}
+
+.btn-login-register-submit:active{
+    outline: 0;
+    border: none;
 }
 
 /*--- LOGIN / REGISTER END ---*/

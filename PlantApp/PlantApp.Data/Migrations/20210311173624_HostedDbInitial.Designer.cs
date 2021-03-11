@@ -10,8 +10,8 @@ using PlantApp.Data;
 namespace PlantApp.Data.Migrations
 {
     [DbContext(typeof(PlantAppDbContext))]
-    [Migration("20210305164503_Initial")]
-    partial class Initial
+    [Migration("20210311173624_HostedDbInitial")]
+    partial class HostedDbInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

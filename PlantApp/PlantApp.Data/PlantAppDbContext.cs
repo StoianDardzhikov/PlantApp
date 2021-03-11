@@ -22,7 +22,8 @@ namespace PlantApp.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-RRQS078\\SQLEXPRESS01;Database=PlantAppDb;Integrated Security=true").UseLazyLoadingProxies();
+                //optionsBuilder.UseSqlServer("Server=DESKTOP-RRQS078\\SQLEXPRESS01;Database=PlantAppDb;Integrated Security=true").UseLazyLoadingProxies();
+                optionsBuilder.UseSqlServer("Server=SQL5080.site4now.net;Database=DB_A70974_StoianDardzhikov;User Id=DB_A70974_StoianDardzhikov_admin;Password=rootroot1Bg!").UseLazyLoadingProxies();
             }
             base.OnConfiguring(optionsBuilder);
         }
