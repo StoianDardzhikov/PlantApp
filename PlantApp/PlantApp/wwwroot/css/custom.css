@@ -7,6 +7,7 @@
 
 main {
     padding-bottom: 0px !important;
+    width: 100% !important;
 }
 
 p{
@@ -15,6 +16,7 @@ p{
 
 .page-content {
     margin-left: 7rem;
+    width: 100%;
 }
 
 .page-container {
@@ -77,9 +79,18 @@ p{
     box-shadow: #151515 3px 0px 5px;
 }
 
+
+
 .navibar {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
     padding: 7px;
+    height: 100%;
+}
+
+.bottom {
+    margin-top: auto;
 }
 
 .navbar-item {
@@ -95,7 +106,7 @@ p{
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-top: 57vh;
+    align-self: flex-end;
     outline: none;
     border: none;
     width: 4rem;
@@ -147,18 +158,26 @@ p{
 
 /*--- HOME/MYPLANTS(PARTIAL) START ---*/
 
-.card-grid {
+/*.card-grid {
     display: grid;
     justify-self: center;
     grid-template-columns: repeat(5, 19rem);
     margin-left: 7rem;
     margin-top: 2rem;
+}*/
+
+.row {
+    width: 100%;
 }
 
-.card-container {
+.col-auto {
+    margin-top: 3rem;
+}
+
+/*.card-container {
     margin-top: 3rem;
     margin-right: 3rem;
-}
+}*/
 
 .card-image-container {
     transition: 0.3s;
@@ -213,18 +232,20 @@ p{
     transition: 0.2s;
 }
 
-.card-container:hover .card-image-container {
+.col-auto:hover .card-image-container {
     width: 16rem;
     height: 11rem;
     margin: -0.5rem;
 }
 
-.card-container:hover .plant-info-home {
+.col-auto:hover .plant-info-home {
     width: 16rem;
     height: 7.5rem;
     margin: -0.5rem;
     box-shadow: #171717 0px 4px 5px;
 }
+
+
 
 .btn-water:hover {
     background-color: #576272;
@@ -295,7 +316,7 @@ p{
     background-color: #484F5A;
 }
 
-.card-container:hover .plant-info-myplants {
+.col-auto:hover .plant-info-myplants {
     width: 16rem;
     height: 9rem;
     margin: -0.5rem;
