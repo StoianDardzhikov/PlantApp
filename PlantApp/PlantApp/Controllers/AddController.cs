@@ -29,7 +29,7 @@ namespace PlantApp.Controllers
 
             if (ModelState.IsValid) 
             {
-                plantService.Add(name, wateringPeriod, DateTime.Now, User.Identity.Name);
+                plantService.Add(name, wateringPeriod, DateTime.UtcNow, User.Identity.Name);
                 return RedirectToAction("Index", "MyPlants");
             }
             return View();
