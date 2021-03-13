@@ -58,8 +58,14 @@ namespace PlantApp.Controllers
         [Authorize]
         public IActionResult EditPlant(int id, string plantName, int wateringPeriod)
         {
-            plantService.Edit(plantName, wateringPeriod, id);
-            return RedirectToAction("Index");
+            if (string.IsNullOrEmpty(plantName)) ModelState.AddModelError(nameof(plantName), "Името на растението не може да е празно.");
+            if (wateringPeriod <= 0) ModelState.AddModelError(nameof(wateringPeriod), "Периода за поливане не може да е по-малък от 1.");
+            if (ModelState.IsValid)
+            {
+                plantService.Edit(plantName, wateringPeriod, id);
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Edit", id);
         }
     }
 }

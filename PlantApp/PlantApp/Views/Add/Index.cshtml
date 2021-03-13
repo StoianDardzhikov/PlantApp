@@ -15,18 +15,19 @@
     </div>
     <div class="add-form-image-container">
         <form class="add-form" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="input-container">
                 <label class="add-label" asp-for="@Model.Name">Име на растението</label>
-                <input class="add-input" asp-for="@Model.Name"/>
-                @*<span asp-validation-for="/" class="text-danger"></span>*@
+                <input class="add-input" asp-for="@Model.Name" />
+                <span asp-validation-for="@Model.Name" class="text-danger"></span>
             </div>
             <div class="input-container">
                 <label class="add-label" asp-for="@Model.WateringPeriod">Период на поливане</label>
-                <input class="add-input" asp-for="@Model.WateringPeriod"/>
-                @*<span asp-validation-for="/" class="text-danger"></span>*@
+                <input class="add-input" asp-for="@Model.WateringPeriod" />
+                <span asp-validation-for="@Model.WateringPeriod" class="text-danger"></span>
             </div>
             <div class="btn-add-plant-container">
-                <button type="submit" class="btn-add-plant"asp-action="Create" asp-controller="Add">
+                <button type="submit" class="btn-add-plant" asp-action="Index" asp-controller="Add">
                     ДОБАВИ
                 </button>
             </div>

@@ -21,10 +21,18 @@ namespace PlantApp.Controllers
             return View();
         }
 
-        public IActionResult Create(string name, int wateringPeriod)
+        [HttpPost]
+        public IActionResult Index(string name, int wateringPeriod)
         {
-            plantService.Add(name, wateringPeriod, DateTime.UtcNow, User.Identity.Name);
-            return RedirectToAction("Index", "MyPlants");
+            if (string.IsNullOrEmpty(name)) ModelState.AddModelError(nameof(name), "Името на растението не може да е празно.");
+            if (wateringPeriod <= 0) ModelState.AddModelError(nameof(wateringPeriod), "Периода за поливане не може да е по-малък от 1.");
+
+            if (ModelState.IsValid) 
+            {
+                plantService.Add(name, wateringPeriod, DateTime.Now, User.Identity.Name);
+                return RedirectToAction("Index", "MyPlants");
+            }
+            return View();
         }
     }
 }

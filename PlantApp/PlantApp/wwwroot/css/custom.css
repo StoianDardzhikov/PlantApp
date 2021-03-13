@@ -158,13 +158,6 @@ p{
 
 /*--- HOME/MYPLANTS(PARTIAL) START ---*/
 
-/*.card-grid {
-    display: grid;
-    justify-self: center;
-    grid-template-columns: repeat(5, 19rem);
-    margin-left: 7rem;
-    margin-top: 2rem;
-}*/
 
 .row {
     width: 100%;
@@ -173,11 +166,6 @@ p{
 .col-auto {
     margin-top: 3rem;
 }
-
-/*.card-container {
-    margin-top: 3rem;
-    margin-right: 3rem;
-}*/
 
 .card-image-container {
     transition: 0.3s;

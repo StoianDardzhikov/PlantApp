@@ -18,12 +18,12 @@
             <div class="input-container">
                 <label class="add-label" asp-for="@Model.PlantName">Име на растението</label>
                 <input class="add-input" asp-for="@Model.PlantName" value="@Model.PlantName"/>
-                @*<span asp-validation-for="/" class="text-danger"></span>*@
+                <span asp-validation-for="@Model.PlantName" class="text-danger"></span>
             </div>
             <div class="input-container">
                 <label class="add-label" asp-for="@Model.WateringPeriod">Период на поливане</label>
                 <input class="add-input" asp-for="@Model.WateringPeriod" value="@Model.WateringPeriod"/>
-                @*<span asp-validation-for="/" class="text-danger"></span>*@
+                <span asp-validation-for="@Model.WateringPeriod" class="text-danger"></span>
             </div>
             <div class="btn-add-plant-container">
                 <button type="submit" class="btn-add-plant" asp-route-id="@Model.PlantId" asp-action="EditPlant" asp-controller="MyPlants">
