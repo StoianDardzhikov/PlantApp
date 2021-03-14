@@ -59,6 +59,7 @@ namespace PlantApp.Controllers
         public IActionResult EditPlant(int id, string plantName, int wateringPeriod)
         {
             if (string.IsNullOrEmpty(plantName)) ModelState.AddModelError(nameof(plantName), "Името на растението не може да е празно.");
+            if (plantName.Length >= 50) ModelState.AddModelError(nameof(plantName), "Името на растението не може да е повече от 50.");
             if (wateringPeriod <= 0) ModelState.AddModelError(nameof(wateringPeriod), "Периода за поливане не може да е по-малък от 1.");
             if (ModelState.IsValid)
             {

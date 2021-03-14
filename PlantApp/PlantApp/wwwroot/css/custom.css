@@ -1,6 +1,6 @@
 ﻿body {
-    min-height: 100vh;
     min-width: 100%;
+    height: auto;
     margin-bottom: 0px;
     background-color: #272C33;
 }
@@ -24,6 +24,7 @@ p{
 }
 
 .page-content-container {
+    height: auto;
     justify-content: center;
 }
 
@@ -208,6 +209,23 @@ p{
     align-self: center;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+
+.height-control {
+    height: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.no-plants-text {
+    font-style: italic;
+    color: #7d8297;
+}
+
+.no-plants-svg {
+    width: 15%;
+    height: 15%;
 }
 
 .btn-water {

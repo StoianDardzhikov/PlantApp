@@ -22,11 +22,17 @@
             </button>
         </form>
     </div>
-    <div class="row justify-content-center" >
+    @{
+        if (Model.plantCards.Count() == 0) Html.RenderPartial("_NoPlants");
+    }
+    <div class="row justify-content-center">
         @{
-            foreach (MyPlantsPlantCardViewModel plantCard in Model.plantCards)
-            {
-                Html.RenderPartial("_PlantCard", plantCard);
+            if (Model.plantCards.Count() > 0)
+            { 
+                foreach (MyPlantsPlantCardViewModel plantCard in Model.plantCards)
+                {
+                    Html.RenderPartial("_PlantCard", plantCard);
+                }
             }
         }
     </div>
