@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlantApp.Services", "PlantA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlantApp.ViewModels", "PlantApp.ViewModels\PlantApp.ViewModels.csproj", "{E29FFB7D-AF44-4D1C-B497-3A12B01D69C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantApp.Tests", "PlantApp.Tests\PlantApp.Tests.csproj", "{18D51555-B1AD-4408-B360-53F2E30707CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlantApp.Tests", "PlantApp.Tests\PlantApp.Tests.csproj", "{18D51555-B1AD-4408-B360-53F2E30707CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

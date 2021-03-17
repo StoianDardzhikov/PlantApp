@@ -24,6 +24,7 @@ p{
 }
 
 .page-content-container {
+    display: block;
     height: auto;
     justify-content: center;
 }
@@ -32,20 +33,24 @@ p{
 
 .title-container-home {
     display: flex;
-    margin-left: 35vw;
-    margin-top: 30px;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-container-myplants {
     display: flex;
-    margin-left: 31vw;
-    margin-top: 30px;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-container-add {
     display: flex;
-    margin-left: 31vw;
-    margin-top: 30px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
@@ -64,554 +69,641 @@ p{
     height: 3rem;
 }
 
-/*--- TITLE END ---*/
-
-
-
-
-
-
-/*--- NAVBAR START ---*/
-
-.nav-fixed {
-    background-color: #31363E;
-    position: fixed;
-    height: 100vh;
-    box-shadow: #151515 3px 0px 5px;
-}
-
-
-
-.navibar {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding: 7px;
-    height: 100%;
-}
-
-.bottom {
-    margin-top: auto;
-}
-
-.navbar-item {
-    width: 4rem;
-    height: 4rem;
-    margin: 0 0 2.5rem 0;
-    border-radius: 50%;
-    padding: 10px 10px;
-    transition: 0.5s;
-}
-
-.btn-logout {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-end;
-    outline: none;
-    border: none;
-    width: 4rem;
-    height: 4rem;
-    padding: 10px 10px;
-    border-radius: 50%;
-    transition: 0.5s;
-    background-color: transparent;
-}
-
-.svg-logout {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-
-.navbar-item:focus {
-    background-color: #484F5A;
-}
-
-.navbar-item:hover {
-    width: 4.5rem;
-    height: 4.5rem;
-    background-color: #484F5A;
-}
-
-.navbar-profile-icon:hover {
-    width: 4.5rem;
-    height: 4.5rem;
-    background-color: #484F5A;
-}
-
-.btn-logout:hover {
-    width: 4.5rem;
-    height: 4.5rem;
-    background-color: #484F5A;
-}
-
-.btn-logout:active{
-    outline: 0;
-    border: none;
-}
-
-/*--- NAVBAR END ---*/
-
-
-
-
-/*--- HOME/MYPLANTS(PARTIAL) START ---*/
-
-
-.row {
-    width: 100%;
-}
-
-.col-auto {
-    margin-top: 3rem;
-}
-
-.card-image-container {
-    transition: 0.3s;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 10rem;
-    background-color: white;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-}
-
-.card-image {
-    position: relative;
-    width: 4rem;
-    height: 4rem;
-}
-
-.plant-info-home {
-    transition: 0.3s;
-    position: relative;
-    display: grid;
-    grid-auto-columns: 10rem;
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 6.5rem;
-    background-color: #31363E;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    box-shadow: #171717 0px 1px 7px;
-    color: white;
-}
-
-.plant-name {
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-
-.height-control {
-    height: 100%;
-    padding-top: 20%;
-    padding-bottom: 20%;
-}
-
-.no-plants-text {
-    font-style: italic;
-    color: #7d8297;
-}
-
-.no-plants-svg {
-    width: 15%;
-    height: 15%;
-}
-
-.btn-water {
-    margin-bottom: 10px;
-    border: none;
-    width: 10rem;
-    height: 2rem;
-    background-color: #484F5A;
-    color: white;
-    transition: 0.2s;
-}
-
-.col-auto:hover .card-image-container {
-    width: 16rem;
-    height: 11rem;
-    margin: -0.5rem;
-}
-
-.col-auto:hover .plant-info-home {
-    width: 16rem;
-    height: 7.5rem;
-    margin: -0.5rem;
-    box-shadow: #171717 0px 4px 5px;
-}
-
-
-
-.btn-water:hover {
-    background-color: #576272;
-}
-
-.btn-water:active{
-    outline: 0;
-    border: none;
-}
-
-/*--- HOME/MYPLANTS(PARTIAL) END ---*/
-
-
-
-
-
-
-/*--- MYPLANTS CARD START*/
-
-.plant-info-myplants {
-    transition: 0.3s;
-    position: relative;
-    display: grid;
-    grid-auto-columns: 10rem;
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 8rem;
-    background-color: #31363E;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    box-shadow: #171717 0px 1px 7px;
-    color: white;
-}
-
-.plant-period{
-    display: flex;
-    font-size: 15px;
-}
-
-.btn-edit-delete-container{
-    display: flex;
-    margin-right: 1rem;
-    width: 100%;
-}
-
-.btn-edit-plant {
-    transition: 0.3s;
-    width: 5rem;
-    height: 1.75rem;
-    margin-right: 0.2rem;
-    border: none;
-    outline: none;
-    color: white;
-    margin-bottom: 0.7rem;
-    background-color: #484F5A;
-}
-
-.btn-delete-plant {
-    transition: 0.3s;
-    width: 5rem;
-    height: 1.75rem;
-    margin-left: 0.2rem;
-    border: none;
-    outline: none;
-    color: white;
-    margin-bottom: 0.7rem;
-    background-color: #484F5A;
-}
-
-.col-auto:hover .plant-info-myplants {
-    width: 16rem;
-    height: 9rem;
-    margin: -0.5rem;
-    box-shadow: #171717 0px 4px 5px;
-}
-
-.btn-delete-plant:hover{
-    background-color: #fa6666;
-    border: thick;
-    border-color: darkred;
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 20px;
+    }
 }
 
-.btn-edit-plant:hover {
-    background-color: #576272;
-}
-
-.btn-delete-plant:active{
-    outline: 0;
-}
-
-.btn-edit-plant:active{
-    outline: 0;
-    border: none;
-}
-
-/*--- MYPLANTS CARD END ---*/
-
-
-
-
-
-/*--- SEARCH ENGINE START ---*/
-
-.search-engine-container{
-    position: absolute;
-    top: 2rem;
-    right: 5rem;
-}
-
-.search.form{
-    display: flex;
-}
-
-.btn-search {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    right: 0.5rem;
-    border-radius: 50%;
-    border: none;
-    background-color: transparent;
-    align-self: center;
-}
-
-.btn-search-svg{
-    position: relative;
-    width: 2rem;
-    height: 2rem;
-    align-self: center;
-    justify-self: center;
-}
-
-.search-engine {
-    width: 20rem;
-    height: 3rem;
-    border: 10px solid #31363E;
-    outline: none;
-    border-radius: 20px;
-    background-color: #31363E;
-    color: white;
-}
-
-.btn-search:active {
-    outline: 0; 
-    border: none;
-}
-
-/*--- SEARCH ENGINE END ---*/
-
-
-
-
-
-
-/*--- ADD(PLANTS) START ---*/
-
-.add-form-image-container{
-    display: flex;
-}
-
-.add-form{
-    width: 25rem;
-    margin-top: 10rem;
-    margin-left: 12rem;
-}
-
-.add-label {
-    font-size: 30px;
-    color: white;
-}
-
-.add-input {
-    height: 3rem;
-    width: 25rem;
-    border: 10px solid #31363E;
-    outline: none;
-    border-radius: 20px;
-    background-color: #31363E;
-    color: white;
-}
-
-.btn-add-plant-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
-}
-
-.btn-add-plant{
-    transition: 0.2s;
-    width: 15rem;
-    height: 2.5rem;
-    border: none;
-    outline: 0;
-    color: white;
-    background-color: #29a82e;
-    border-radius: 15px;
-    font-size: 19px;
-    font-weight: 600;
-}
-
-.add-svg{
-    position: absolute;
-    width: 50rem;
-    height: 50rem;
-    margin-top: 5rem;
-    right: 10rem;
-}
-
-.btn-add-plant:hover {
-    width: 15.45rem;
-    height: 2.95rem;
-    background-color: #269d2b;
-}
-
-.btn-add-plant:active{
-    outline: 0;
-    border: none;
-}
-
-/*--- ADD(PLANTS) END ---*/
-
-
-
-
-
-
-/*---LOGIN / REGISTER START ---*/
-
-.login-register-page-container {
-    display: flex;
-}
-
-.form-container {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    margin-top: 13rem;
-    margin-left: 5rem;
-}
-
-.login-register-title {
-    color: white;
-}
-
-.input-container {
-    display: grid;
-    margin-top: 2rem;
-}
-
-.login-register-label {
-    font-size: 30px;
-}
+    /*--- TITLE END ---*/
 
-.login-register-input {
-    height: 3rem;
-    width: 25rem;
-    border: 10px solid #31363E;
-    outline: none;
-    border-radius: 20px;
-    background-color: #31363E;
-    color: white;
-}
-
-.login-register-label {
-    color: white;
-}
-
-.login-register-submit-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-login-register-submit {
-    margin-top: 4rem;
-    width: 17rem;
-    height: 3.5rem;
-    border-radius: 15px;
-    font-size: 25px;
-    border: none;
-    outline: none;
-    background-color: #4CAF50;
-    color: white;
-    transition: 0.5s;
-}
-
-.login-register-background {
-    position: absolute;
-    height: 90vh;
-    width: 50vw;
-    z-index: -100;
-    right: 150px;
-    justify-self: right;
-}
-
-.login-register-app-name {
-    position: absolute;
-    color: white;
-    font-size: 45px;
-    right: 500px;
-    bottom: 50px;
-}
 
-.login-register-link {
-    color: gray;
-    font: italic;
-}
-
-.btn-login-register-plant-svg-1 {
-    transition: 0.3s;
-    position: absolute;
-    margin-left: 2rem;
-    z-index: -100;
-    width: 2rem;
-    height: 2rem;
-}
-
-.btn-login-register-plant-svg-2 {
-    transition: 1.3s;
-    position: absolute;
-    margin-left: 8.5rem;
-    z-index: -100;
-    width: 2rem;
-    height: 2rem;
-}
 
-.btn-login-register-plant-svg-3 {
-    transition: 0.7s;
-    position: absolute;
-    margin-left: -2rem;
-    z-index: -100;
-    width: 2rem;
-    height: 2rem;
-}
 
-input.login-register-submit[type="submit"]:hover {
-    width: 17.5rem;
-    height: 3.75rem;
-    font-size: 26px;
-    background-color: #65c25e;
-}
 
-.btn-login-register-submit:hover .btn-login-register-plant-svg-1 {
-    transform: translateY(-2.5rem);
-}
 
-.btn-login-register-submit:hover .btn-login-register-plant-svg-2 {
-    transform: translateY(-2.5rem);
-}
+    /*--- NAVBAR START ---*/
 
-.btn-login-register-submit:hover .btn-login-register-plant-svg-3 {
-    transform: translateY(-2.5rem);
-}
+    .nav-fixed {
+        background-color: #31363E;
+        position: fixed;
+        height: 100vh;
+        box-shadow: #151515 3px 0px 5px;
+    }
+
+
 
-.btn-login-register-submit:active{
-    outline: 0;
-    border: none;
-}
+    .navibar {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 7px;
+        height: 100%;
+    }
+
+    .bottom {
+        margin-top: auto;
+    }
+
+    .navbar-item {
+        width: 4rem;
+        height: 4rem;
+        margin: 0 0 2.5rem 0;
+        border-radius: 50%;
+        padding: 10px 10px;
+        transition: 0.5s;
+    }
+
+    .btn-logout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        outline: none;
+        border: none;
+        width: 4rem;
+        height: 4rem;
+        padding: 10px 10px;
+        border-radius: 50%;
+        transition: 0.5s;
+        background-color: transparent;
+    }
+
+    .svg-logout {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+
+    .navbar-item:focus {
+        background-color: #484F5A;
+    }
+
+    .navbar-item:hover {
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: #484F5A;
+    }
+
+    .navbar-profile-icon:hover {
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: #484F5A;
+    }
+
+    .btn-logout:hover {
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: #484F5A;
+    }
+
+    .btn-logout:active {
+        outline: 0;
+        border: none;
+    }
+
+    /*--- NAVBAR END ---*/
+
+
+
+
+    /*--- HOME/MYPLANTS(PARTIAL) START ---*/
+
 
-/*--- LOGIN / REGISTER END ---*/
+    .row {
+        width: 100%;
+    }
+
+    .col-auto {
+        margin-top: 3rem;
+    }
+
+    .card-image-container {
+        transition: 0.3s;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 10rem;
+        background-color: white;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    .card-image {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .plant-info-home {
+        transition: 0.3s;
+        position: relative;
+        display: grid;
+        grid-auto-columns: 10rem;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 6.5rem;
+        background-color: #31363E;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: #171717 0px 1px 7px;
+        color: white;
+    }
+
+    .plant-name {
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+
+    .height-control {
+        height: 100%;
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+
+    .no-plants-text {
+        font-style: italic;
+        color: #7d8297;
+    }
+
+    .no-plants-svg {
+        width: 15%;
+        height: 15%;
+    }
+
+    .btn-water {
+        margin-bottom: 10px;
+        border: none;
+        width: 10rem;
+        height: 2rem;
+        background-color: #484F5A;
+        color: white;
+        transition: 0.2s;
+    }
+
+    .col-auto:hover .card-image-container {
+        width: 16rem;
+        height: 11rem;
+        margin: -0.5rem;
+    }
+
+    .col-auto:hover .plant-info-home {
+        width: 16rem;
+        height: 7.5rem;
+        margin: -0.5rem;
+        box-shadow: #171717 0px 4px 5px;
+    }
+
+
+
+    .btn-water:hover {
+        background-color: #576272;
+    }
+
+    .btn-water:active {
+        outline: 0;
+        border: none;
+    }
+
+    /*--- HOME/MYPLANTS(PARTIAL) END ---*/
+
+
+
+
+
+
+    /*--- MYPLANTS CARD START*/
+
+    .plant-info-myplants {
+        transition: 0.3s;
+        position: relative;
+        display: grid;
+        grid-auto-columns: 10rem;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 8rem;
+        background-color: #31363E;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: #171717 0px 1px 7px;
+        color: white;
+    }
+
+    .plant-period {
+        display: flex;
+        font-size: 15px;
+    }
+
+    .btn-edit-delete-container {
+        display: flex;
+        margin-right: 1rem;
+        width: 100%;
+    }
+
+    .btn-edit-plant {
+        transition: 0.3s;
+        width: 5rem;
+        height: 1.75rem;
+        margin-right: 0.2rem;
+        border: none;
+        outline: none;
+        color: white;
+        margin-bottom: 0.7rem;
+        background-color: #484F5A;
+    }
+
+    .btn-delete-plant {
+        transition: 0.3s;
+        width: 5rem;
+        height: 1.75rem;
+        margin-left: 0.2rem;
+        border: none;
+        outline: none;
+        color: white;
+        margin-bottom: 0.7rem;
+        background-color: #484F5A;
+    }
+
+    .col-auto:hover .plant-info-myplants {
+        width: 16rem;
+        height: 9rem;
+        margin: -0.5rem;
+        box-shadow: #171717 0px 4px 5px;
+    }
+
+    .btn-delete-plant:hover {
+        background-color: #fa6666;
+        border: thick;
+        border-color: darkred;
+    }
+
+    .btn-edit-plant:hover {
+        background-color: #576272;
+    }
+
+    .btn-delete-plant:active {
+        outline: 0;
+    }
+
+    .btn-edit-plant:active {
+        outline: 0;
+        border: none;
+    }
+
+    /*--- MYPLANTS CARD END ---*/
+
+
+
+
+
+    /*--- SEARCH ENGINE START ---*/
+
+    .search-engine-container {
+        position: absolute;
+        top: 2rem;
+        right: 5rem;
+    }
+
+    .search.form {
+        display: flex;
+        width: auto;
+    }
+
+    .btn-search {
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        right: 0.5rem;
+        border-radius: 50%;
+        border: none;
+        background-color: transparent;
+        align-self: center;
+    }
+
+    .btn-search-svg {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .search-engine {
+        width: 20rem;
+        height: 3rem;
+        border: 10px solid #31363E;
+        outline: none;
+        border-radius: 20px;
+        background-color: #31363E;
+        color: white;
+    }
+
+    .btn-search:active {
+        outline: 0;
+        border: none;
+    }
+
+    @media screen and (max-width: 1450px) {
+        .search-engine-container {
+            display: flex;
+            position: relative;
+            right: unset;
+            top: unset;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .search-form{
+            position:relative;
+
+        }
+        .btn-search{
+            position: absolute;
+            right: 10px;
+        }
+
+    }
+
+    /*--- SEARCH ENGINE END ---*/
+
+
+
+
+
+
+    /*--- ADD(PLANTS) START ---*/
+
+    .add-form-image-container {
+        display: inline-flex;
+        flex-direction: column;
+        height: 60vh;
+        justify-content: center;
+        margin-left: 15rem;
+    }
+
+
+    .add-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10rem;
+        width: auto;
+    }
+
+    .add-label {
+        font-size: 30px;
+        color: white;
+    }
+
+    .add-input {
+        height: 3rem;
+        width: 25rem;
+        border: 10px solid #31363E;
+        outline: none;
+        border-radius: 20px;
+        background-color: #31363E;
+        color: white;
+    }
+
+    .btn-add-plant-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+    }
+
+    .btn-add-plant {
+        transition: 0.2s;
+        width: 15rem;
+        height: 2.5rem;
+        border: none;
+        outline: 0;
+        color: white;
+        background-color: #29a82e;
+        border-radius: 15px;
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .add-svg {
+        position: absolute;
+        width: 40vw;
+        height: 60vh;
+        margin-top: 5rem;
+        right: 10rem;
+    }
+
+    .btn-add-plant:hover {
+        width: 15.45rem;
+        height: 2.95rem;
+        background-color: #269d2b;
+    }
+
+    .btn-add-plant:active {
+        outline: 0;
+        border: none;
+    }
+
+    @media screen and (max-width: 1415px) {
+        .add-svg {
+            width: 0px;
+            height: 0px;
+        }
+
+        .add-form-image-container {
+            width: 100% !important;
+            margin: 0;
+        }
+
+        .add-form {
+            justify-content: center;
+        }
+    }
+
+    /*--- ADD(PLANTS) END ---*/
+
+
+
+
+
+
+    /*---LOGIN / REGISTER START ---*/
+
+    .login-register-page-container {
+        display: flex;
+    }
+
+    .container {
+        width: auto;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        margin-left: 5rem;
+    }
+
+    .login-register-title {
+        color: white;
+    }
+
+    .input-container {
+        display: grid;
+        margin-top: 2rem;
+    }
+
+    .login-register-label {
+        font-size: 30px;
+    }
+
+    .login-register-input {
+        height: 3rem;
+        width: 25rem;
+        border: 10px solid #31363E;
+        outline: none;
+        border-radius: 20px;
+        background-color: #31363E;
+        color: white;
+    }
+
+    .login-register-label {
+        color: white;
+    }
+
+    .login-register-submit-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-login-register-submit {
+        margin-top: 4rem;
+        width: 17rem;
+        height: 3.5rem;
+        border-radius: 15px;
+        font-size: 25px;
+        border: none;
+        outline: none;
+        background-color: #4CAF50;
+        color: white;
+        transition: 0.5s;
+    }
+
+    .login-register-background {
+        position: absolute;
+        height: 90vh;
+        width: 50vw;
+        z-index: -100;
+        right: 150px;
+        justify-self: right;
+    }
+
+    .login-register-app-name {
+        position: absolute;
+        color: white;
+        font-size: 45px;
+        right: 500px;
+        bottom: 50px;
+    }
+
+    .login-register-link {
+        color: gray;
+        font: italic;
+    }
+
+    .btn-login-register-plant-svg-1 {
+        transition: 0.3s;
+        position: absolute;
+        margin-left: 2rem;
+        z-index: -100;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .btn-login-register-plant-svg-2 {
+        transition: 1.3s;
+        position: absolute;
+        margin-left: 8.5rem;
+        z-index: -100;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .btn-login-register-plant-svg-3 {
+        transition: 0.7s;
+        position: absolute;
+        margin-left: -2rem;
+        z-index: -100;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    input.login-register-submit[type="submit"]:hover {
+        width: 17.5rem;
+        height: 3.75rem;
+        font-size: 26px;
+        background-color: #65c25e;
+    }
+
+    .btn-login-register-submit:hover .btn-login-register-plant-svg-1 {
+        transform: translateY(-2.5rem);
+    }
+
+    .btn-login-register-submit:hover .btn-login-register-plant-svg-2 {
+        transform: translateY(-2.5rem);
+    }
+
+    .btn-login-register-submit:hover .btn-login-register-plant-svg-3 {
+        transform: translateY(-2.5rem);
+    }
+
+    .btn-login-register-submit:active {
+        outline: 0;
+        border: none;
+    }
+
+    @media screen and (max-width: 1515px) {
+        .login-register-page-container {
+            height: 100vh;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-left: -7rem;
+        }
+
+        .form-container {
+            margin: 0px;
+            justify-self: center;
+        }
+
+        .container {
+            justify-self: center;
+        }
+
+        .login-register-background {
+            width: 0px;
+            height: 0px;
+        }
+
+        .login-register-app-name {
+            position: relative;
+            bottom: 0px;
+            right: unset;
+            font-family: 'Bookman Old Style';
+            color: lightgreen;
+            z-index: -100;
+        }
+    }
+
+    /*--- LOGIN / REGISTER END ---*/

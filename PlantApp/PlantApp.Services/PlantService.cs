@@ -50,7 +50,7 @@ namespace PlantApp.Services
         public void SetPlantWatered(int plantId)
         {
             Plant plant = plantRepository.GetById(plantId);
-            plant.LastWateredOn = DateTime.UtcNow;
+            plant.LastWateredOn = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day);
             plantRepository.Update(plant);
         }
 
@@ -69,8 +69,7 @@ namespace PlantApp.Services
             {
                 TimeSpan interval = new TimeSpan(plant.WateringPeriod, 0, 0, 0);
                 DateTime toWater = plant.LastWateredOn + interval;
-                TimeSpan leftTime = toWater - DateTime.UtcNow;
-                if (leftTime.Hours <= 0 && leftTime.Days <= 0)
+                if (DateTime.UtcNow > toWater)
                 {
                     plantsToWater.Add(plant);
                 }
