@@ -1,11 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using NUnit.Framework;
-using PlantApp.Data.Models;
-using Moq;
+﻿using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using PlantApp.Data;
 using PlantApp.Services.Factories;
 
 namespace PlantApp.Tests
@@ -13,7 +7,7 @@ namespace PlantApp.Tests
     class PlantFactoryTests
     {
         [TestCase]
-        public void PlantGetsCreatedCorrectly()
+        public void CreateInstance_WhenCalled_CreatesAndReturnsPlantCorrectly()
         {
             var service = new PlantFactory();
             var plant = service.CreateInstance("plant1", 1, new DateTime(2000, 1, 1, 1, 1, 1));

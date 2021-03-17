@@ -4,17 +4,15 @@ using NUnit.Framework;
 using PlantApp.Data;
 using PlantApp.Data.Models;
 using PlantApp.Services.Repositories;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace PlantApp.Tests
 {
     class UserRepositoryTests
     {
         [TestCase]
-        public void ReturnsCorrectUserByName()
+        public void GetByName_WhenCalled_ReturnsTheCorrectUser()
         {
             var data = new List<User>
             {

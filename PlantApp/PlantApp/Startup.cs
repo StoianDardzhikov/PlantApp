@@ -9,8 +9,6 @@ using PlantApp.Data;
 using PlantApp.Data.Models;
 using PlantApp.Services;
 using PlantApp.Services.Contracts;
-using PlantApp.Services.Repositories;
-using PlantApp.Services.Repositories.Interfaces;
 using System;
 
 namespace PlantApp

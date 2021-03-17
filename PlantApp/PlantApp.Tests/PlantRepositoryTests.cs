@@ -7,14 +7,13 @@ using PlantApp.Services.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace PlantApp.Tests
 {
     class PlantRepositoryTests
     {
         [TestCase]
-        public void PlantGetAddedToDatabase()
+        public void Add_WhenCalled_AddsPlantToDatabase()
         {
             var mockSet = new Mock<DbSet<Plant>>();
 
@@ -31,7 +30,7 @@ namespace PlantApp.Tests
         }
 
         [TestCase]
-        public void PlantGetDeletedFromDatabase()
+        public void Delete_WhenCalled_DeletesPlantFromDatabase()
         {
             var data = new List<Plant>
             {
@@ -56,7 +55,7 @@ namespace PlantApp.Tests
         }
 
         [TestCase]
-        public void ReturnsCorrectPlantById()
+        public void GetById_WhenCalled_ReturnsTheCorrectPlant()
         {
             var data = new List<Plant>
             {
@@ -81,7 +80,7 @@ namespace PlantApp.Tests
         }
 
         [TestCase]
-        public void ReturnsAllPlants()
+        public void GetAll_WhenCalled_ReturnsAllPlants()
         {
             var data = new List<Plant>
             {

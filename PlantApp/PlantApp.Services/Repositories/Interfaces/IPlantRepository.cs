@@ -1,7 +1,5 @@
 ﻿using PlantApp.Data.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace PlantApp.Services.Repositories.Interfaces
 {

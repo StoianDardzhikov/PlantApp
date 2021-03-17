@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PlantApp.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PlantApp.Data
 {

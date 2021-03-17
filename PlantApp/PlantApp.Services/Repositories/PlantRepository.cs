@@ -1,10 +1,8 @@
 ﻿using PlantApp.Data;
 using PlantApp.Data.Models;
 using PlantApp.Services.Repositories.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace PlantApp.Services.Repositories
 {

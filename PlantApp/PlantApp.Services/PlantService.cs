@@ -5,17 +5,16 @@ using PlantApp.Services.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using PlantApp.Data;
 
 namespace PlantApp.Services
 {
     public class PlantService : IPlantService
     {
-        PlantRepository plantRepository;
-        PlantFactory plantFactory;
+        private readonly PlantRepository plantRepository;
+        private readonly PlantFactory plantFactory;
 
-        UserRepository userRepository;
+        private readonly UserRepository userRepository;
 
         public PlantService(PlantAppDbContext context)
         {
@@ -54,16 +53,16 @@ namespace PlantApp.Services
             plantRepository.Update(plant);
         }
 
-        public List<Plant> ListAll(string username)
+        public List<Plant> GetAllPlantsOfUser(string username)
         {
             User user = userRepository.GetByName(username);
             return user.Plants.ToList();
         }
 
-        public List<Plant> ListAllForWatering(string username)
+        public List<Plant> GetAllPlantsForWateringOfUser(string username)
         {
             List<Plant> plantsToWater = new List<Plant>();
-            List<Plant> plants = ListAll(username);
+            List<Plant> plants = GetAllPlantsOfUser(username);
 
             foreach (var plant in plants)
             {
