@@ -21,12 +21,12 @@
                 <span asp-validation-for="@Model.Name" class="text-danger"></span>
             </div>
             <div class="input-container">
-                <label class="add-label" asp-for="@Model.WateringPeriod">Период на поливане</label>
+                <label class="add-label" asp-for="@Model.WateringPeriod">Период на поливане (в дни)</label>
                 <input class="add-input" asp-for="@Model.WateringPeriod" value="@Model.WateringPeriod"/>
                 <span asp-validation-for="@Model.WateringPeriod" class="text-danger"></span>
             </div>
             <div class="btn-add-plant-container">
-                <button type="submit" class="btn-add-plant" asp-route-id="@Model.PlantId" asp-action="EditPlant" asp-controller="MyPlants">
+                <button type="submit" class="btn-add-plant" asp-route-id="@Model.PlantId" asp-action="Edit" asp-controller="MyPlants">
                     ЗАПАЗИ
                 </button>
             </div>

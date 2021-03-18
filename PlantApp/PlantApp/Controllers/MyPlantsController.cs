@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Newtonsoft.Json;
 using PlantApp.Data.Models;
 using PlantApp.Services.Contracts;
 using PlantApp.ViewModels;
@@ -52,17 +54,19 @@ namespace PlantApp.Controllers
         }
 
         [Authorize]
-        public IActionResult EditPlant(int id, string name, int wateringPeriod)
+        [HttpPost]
+        public IActionResult Edit(int id, string name, int wateringPeriod)
         {
             if (string.IsNullOrEmpty(name)) ModelState.AddModelError(nameof(name), "Името на растението не може да е празно.");
-            if (name.Length >= 50) ModelState.AddModelError(nameof(name), "Името на растението не може да е повече от 50.");
+            else if (name.Length >= 50) ModelState.AddModelError(nameof(name), "Името на растението не може да е повече от 50.");
             if (wateringPeriod <= 0) ModelState.AddModelError(nameof(wateringPeriod), "Периода за поливане не може да е по-малък от 1.");
             if (ModelState.IsValid)
             {
                 plantService.Edit(name, wateringPeriod, id);
                 return RedirectToAction("Index");
             }
-            return RedirectToAction("Edit", id);
+
+            return View(new EditPlantViewModel() { PlantId = id, Name = name, WateringPeriod = wateringPeriod });
         }
     }
 }
