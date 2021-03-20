@@ -15,12 +15,9 @@
     }
     <div class="row justify-content-center">
         @{
-            if (Model.plantCards.Count() > 0)
+            foreach (PlantCardViewModel waterPlantCard in Model.plantCards)
             {
-                foreach (PlantCardViewModel waterPlantCard in Model.plantCards)
-                {
-                    Html.RenderPartial("_WaterPlantCard", waterPlantCard);
-                }
+                Html.RenderPartial("_WaterPlantCard", waterPlantCard);
             }
         }
     </div>

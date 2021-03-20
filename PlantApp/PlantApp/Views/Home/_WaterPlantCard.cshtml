@@ -4,10 +4,10 @@
 @using PlantApp.ViewModels;
 @model PlantCardViewModel
 
-    <div class="col-auto col-sm-auto col-md-auto col-lg-auto">
-        <div class="card-image-container">
-            <svg class="card-image" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<div class="col-auto col-sm-auto col-md-auto col-lg-auto">
+    <div class="card-image-container">
+        <svg class="card-image" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <path style="fill:#80C56E;" d="M408.906,45.536c2.263,6.186,27.401,79.804-24.155,166.617
 c-31.315,52.729-78.861,56.218-83.517,56.434c-2.727-3.781-29.57-43.179-7.763-100.497
 C329.376,73.721,402.655,47.612,408.906,45.536z" />
@@ -296,12 +296,11 @@ C415.075,336.96,405.961,327.846,394.718,327.846z" />
 <g>
 </g>
 </svg>
-        </div>
-        <div class="plant-info-home">
-            <h3 class="plant-name">@Model.Name</h3>
-            <form>
-                <button class="btn-water" asp-area="" asp-route-id="@Model.Id" asp-action="Water" asp-controller="Home">ПОЛЕЙ</button>
-            </form>
-        </div>
+    </div>
+    <div class="plant-info-home">
+        <h3 class="plant-name">@Model.Name</h3>
+        <form>
+            <button class="btn-water" asp-area="" asp-route-id="@Model.Id" asp-action="Water" asp-controller="Home">ПОЛЕЙ</button>
+        </form>
     </div>
 </div>
